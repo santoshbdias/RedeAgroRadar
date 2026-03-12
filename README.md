@@ -31,7 +31,7 @@ Este é um exemplo básico que mostra como iniciar o painel de monitoramento int
 library(RedeAgroRadar)
 
 # Iniciar o dashboard interativo
-if (interactive()) {
-  Run_Monitor_RedeAgro()
-}
+Run_Monitor_RedeAgro()
+
+
 ```
