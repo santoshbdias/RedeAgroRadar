@@ -28,20 +28,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' # Enviar status imediatamente
-#' status_diario(
-#'   bot_token = "SEU_TOKEN_AQUI",
-#'   chat_id = "-1001234567890",
-#'   mensagem = "Teste manual de status do radar."
-#' )
-#'
+#' # Exemplo necessita de token e chatID 'Telegram'
 #' # Enviar apenas se o horario local for exatamente 13:00
 #' status_diario(
 #'   bot_token = "SEU_TOKEN_AQUI",
 #'   chat_id = "-1001234567890",
-#'   hora_alerta = "13:00"
+#'   hora_alerta = "13:00",
+#'   mensagem = "Teste manual de status do radar."
 #' )
 #' }
+
 status_diario <- function(bot_token, chat_id, hora_alerta = NULL,
                           mensagem = paste0('Mensagem diaria de status. ',
                                             'Sistema de alerta meteorologico ativo e a funcionar perfeitamente.')) {

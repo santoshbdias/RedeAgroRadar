@@ -1,9 +1,9 @@
-#' Baixar Imagem do Radar Meteorológico do Paraná (Simepar)
+#' Baixar Imagem do Radar Meteorológico do Paraná ('Simepar')
 #'
 #' @description
 #' Faz o download da imagem mais recente do radar meteorológico do Paraná,
-#' disponibilizada publicamente pelo Simepar, e a carrega diretamente na
-#' memória do R como um objeto de imagem.
+#' disponibilizada publicamente peloo 'Simepar' (<https://www.simepar.br/simepar/radar_msc>),
+#' e a carrega diretamente na memória do 'R' como um objeto de imagem.
 #'
 #' @details
 #' A função realiza uma requisição HTTP \code{GET} utilizando cabeçalhos (headers)
@@ -11,10 +11,10 @@
 #' na memória (em formato \code{raw}), sem a necessidade de gravar arquivos temporários
 #' no disco, o que otimiza a performance. Inclui também uma trava de tempo (\code{timeout})
 #' para evitar travamentos infinitos caso o servidor do radar esteja fora do ar,
-#' uma prática exigida pelas políticas do CRAN.
+#' uma prática exigida pelas políticas do 'CRAN'.
 #'
 #' @param url Caractere. String contendo a URL direta da imagem. O padrão aponta para
-#' o produto atual de radar do Simepar.
+#' o produto atual de radar do 'Simepar'.
 #' @param timeout Numérico. Tempo máximo de espera em segundos pela resposta do
 #' servidor antes de cancelar a operação. Padrão é 10.
 #'
@@ -28,18 +28,19 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' # Baixar a imagem atual do radar com timeout padrao (10s)
 #' radar_img <- baixar_radar_PR()
 #'
-#' # Exibir a imagem no painel de plots do RStudio, se o download foi bem-sucedido
+#' # Exibir a imagem no painel de plots, se o download foi bem-sucedido
 #' if (!is.null(radar_img)) {
 #'   plot(radar_img)
 #' }
 #'
 #' # Tentar baixar com um timeout maior caso a internet esteja lenta
 #' radar_img_lento <- baixar_radar_PR(timeout = 20)
-#' }
+#'
+
+
 baixar_radar_PR <- function(url = "https://lb01.simepar.br/riak/pgw-radar/product1.jpeg",
                             timeout = 10) {
 

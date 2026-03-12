@@ -15,8 +15,8 @@
 #' @param caminho_salvar Caractere opcional. Caminho completo (incluindo o nome do arquivo e
 #' extensão .png) para salvar a imagem gerada. Se \code{NULL}, salva em um diretório temporário.
 #'
-#' @return Retorna um objeto de imagem (\code{magick-image}) com as marcações desenhadas,
-#' ou \code{NULL} em caso de falha na obtenção da imagem ou cidade não encontrada.
+#' @return Retorna um objeto de imagem do 'magick' (\code{magick-image}) com as marcações
+#' desenhadas, ou \code{NULL} em caso de falha na obtenção da imagem.
 #' Como efeito colateral, salva a imagem gerada no disco.
 #'
 #' @importFrom magick image_draw image_write
@@ -26,19 +26,20 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' # Gerar imagem para Cianorte com raio de 50 pixels (salva em tempfile)
+#' # Gerar imagem para Cianorte com raio de 50 pixels (salva automaticamente em tempfile)
 #' img_cianorte <- gerar_imagem_radar(cidade = "Cianorte", raio = 50)
 #'
-#' # Adicionar uma nova cidade e salvar em um caminho especifico
+#' # Adicionar uma nova cidade e salvar em um caminho temporario seguro para o 'CRAN'
 #' novas_coords <- list("Londrina" = list(x = 520, y = 175))
-#' gerar_imagem_radar(
+#' caminho_teste <- tempfile(fileext = ".png")
+#'
+#' img_londrina <- gerar_imagem_radar(
 #'   cidade = "Londrina",
-#'   raio = 60,
+#'   raio = 50,
 #'   coords_custom = novas_coords,
-#'   caminho_salvar = "C:/temp/radar_londrina.png"
+#'   caminho_salvar = caminho_teste
 #' )
-#' }
+
 gerar_imagem_radar <- function(cidade,
                                raio,
                                img_radar = NULL,

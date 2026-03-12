@@ -1,6 +1,6 @@
 Package: RedeAgroRadar
 Type: Package
-Title: Monitoring Weather Radars and Sending 'Telegram' Alerts for Agricultural Research
+Title: Weather Radar Monitoring and 'Telegram' Alerts for Agriculture Research
 Version: 0.1.1
 Authors@R: c(
     person(
@@ -22,11 +22,13 @@ Authors@R: c(
       comment = c(ORCID = "0000-0001-9727-5024"),
       role = "aut")
   )
-Description: Description: Provides tools to download, process, and analyze real-time 
-    meteorological radar images from Simepar (Paraná, Brazil). Designed to support 
-    the 'Rede Agropesquisa' hydrological monitoring, it includes functions to detect 
-    rainfall intensity based on RGB color values within predefined circular study 
-    areas. Features automated integration with the 'Telegram Bot API' 
+Description: Provides tools to download, process, and analyze real-time 
+    meteorological radar images from Simepar (Paraná, Brazil)
+    <https://www.simepar.br/simepar/radar_msc>. Designed to support the
+    'Rede Agropesquisa' hydrological monitoring, it includes functions to
+    detect rainfall intensity based on Red, Green, and Blue (RGB) color
+    values within predefined circular study areas. Features automated
+    integration with the 'Telegram Bot API' 
     <https://core.telegram.org/bots/api> to send spatialized image alerts and 
     an interactive 'shiny' dashboard for easy configuration and continuous 
     weather tracking.

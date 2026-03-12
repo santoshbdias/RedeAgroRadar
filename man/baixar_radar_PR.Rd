@@ -2,7 +2,7 @@
 % Please edit documentation in R/Baixar_Radar_PR.R
 \name{baixar_radar_PR}
 \alias{baixar_radar_PR}
-\title{Baixar Imagem do Radar Meteorológico do Paraná (Simepar)}
+\title{Baixar Imagem do Radar Meteorológico do Paraná ('Simepar')}
 \usage{
 baixar_radar_PR(
   url = "https://lb01.simepar.br/riak/pgw-radar/product1.jpeg",
@@ -11,7 +11,7 @@ baixar_radar_PR(
 }
 \arguments{
 \item{url}{Caractere. String contendo a URL direta da imagem. O padrão aponta para
-o produto atual de radar do Simepar.}
+o produto atual de radar do 'Simepar'.}
 
 \item{timeout}{Numérico. Tempo máximo de espera em segundos pela resposta do
 servidor antes de cancelar a operação. Padrão é 10.}
@@ -23,8 +23,8 @@ retorna \code{NULL} e exibe uma mensagem de alerta.
 }
 \description{
 Faz o download da imagem mais recente do radar meteorológico do Paraná,
-disponibilizada publicamente pelo Simepar, e a carrega diretamente na
-memória do R como um objeto de imagem.
+disponibilizada publicamente peloo 'Simepar' (\url{https://www.simepar.br/simepar/radar_msc}),
+e a carrega diretamente na memória do 'R' como um objeto de imagem.
 }
 \details{
 A função realiza uma requisição HTTP \code{GET} utilizando cabeçalhos (headers)
@@ -32,19 +32,18 @@ customizados para evitar bloqueios do servidor. O carregamento é feito diretame
 na memória (em formato \code{raw}), sem a necessidade de gravar arquivos temporários
 no disco, o que otimiza a performance. Inclui também uma trava de tempo (\code{timeout})
 para evitar travamentos infinitos caso o servidor do radar esteja fora do ar,
-uma prática exigida pelas políticas do CRAN.
+uma prática exigida pelas políticas do 'CRAN'.
 }
 \examples{
-\dontrun{
 # Baixar a imagem atual do radar com timeout padrao (10s)
 radar_img <- baixar_radar_PR()
 
-# Exibir a imagem no painel de plots do RStudio, se o download foi bem-sucedido
+# Exibir a imagem no painel de plots, se o download foi bem-sucedido
 if (!is.null(radar_img)) {
   plot(radar_img)
 }
 
 # Tentar baixar com um timeout maior caso a internet esteja lenta
 radar_img_lento <- baixar_radar_PR(timeout = 20)
-}
+
 }

@@ -46,20 +46,13 @@ e \code{gerar_imagem_radar()} para extrair as cores e montar o mapa.
 A comunicação com a API do Telegram é feita via requisição HTTP POST.
 }
 \examples{
-\dontrun{
-# Exemplo de execucao com limites padrao
+ \dontrun{
+# Exemplo necessita de token e chatID 'Telegram'
 executar_alerta_telegram(
   mega = "Cianorte",
   chat_id = "-1001951367890",
   bot_token = "SEU_TOKEN_AQUI",
-  raio = 50
-)
-
-# Exemplo alterando os gatilhos de chuva forte e leve
-executar_alerta_telegram(
-  mega = "Toledo",
-  chat_id = "-1009876543210",
-  bot_token = "SEU_TOKEN_AQUI",
+  raio = 50,
   vermelho = c(80, 20),
   amarelo = c(60, 40)
 )

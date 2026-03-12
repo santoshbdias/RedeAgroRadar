@@ -29,21 +29,25 @@ os valores médios dos canais RGB (Red, Green, Blue) em uma área circular
 ao redor de uma coordenada específica (cidade ou ponto de interesse).
 }
 \details{
-A função depende de \code{baixar_radar_PR()} para obter a imagem de satélite.
-A varredura dos pixels é feita utilizando coordenadas polares para cobrir a área
-definida pelo raio estipulado.
+A função depende de \code{baixar_radar_PR()} para obter a imagem de satélite
+do 'Simepar'. A varredura dos pixels é feita utilizando coordenadas polares
+para cobrir a área definida pelo raio estipulado.
 }
 \examples{
-\dontrun{
 # Analisar a chuva na regiao de Cianorte com raio padrao (50px)
 resultado <- analisar_radar_PR(mega = "Cianorte")
-print(resultado$R) # Valor do canal Vermelho (chuva forte)
 
-# Analisar com um raio maior
-analisar_radar_PR(mega = "PontaGrossa", raio = 80)
+# Verifica se o resultado e uma lista (garante que baixou a imagem sem erro de internet)
+if (is.list(resultado)) {
+  print(resultado$R) # Valor do canal Vermelho (chuva forte)
+}
+
+# Analisar com um raio maior (salvando em variavel para evitar impressoes soltas)
+res_ponta_grossa <- analisar_radar_PR(mega = "PontaGrossa", raio = 80)
 
 # Inserir uma cidade que nao esta na lista padrao
 novas_coords <- list("Cascavel" = list(x = 250, y = 310))
-analisar_radar_PR(mega = "Cascavel", raio = 50, coords_custom = novas_coords)
-}
+res_cascavel <- analisar_radar_PR(mega = "Cascavel", raio = 50,
+                                  coords_custom = novas_coords)
+
 }

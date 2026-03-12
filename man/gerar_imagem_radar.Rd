@@ -28,8 +28,8 @@ predefinidas. Formato esperado: \code{list("NomeDaCidade" = list(x = 100, y = 20
 extensão .png) para salvar a imagem gerada. Se \code{NULL}, salva em um diretório temporário.}
 }
 \value{
-Retorna um objeto de imagem (\code{magick-image}) com as marcações desenhadas,
-ou \code{NULL} em caso de falha na obtenção da imagem ou cidade não encontrada.
+Retorna um objeto de imagem do 'magick' (\code{magick-image}) com as marcações
+desenhadas, ou \code{NULL} em caso de falha na obtenção da imagem.
 Como efeito colateral, salva a imagem gerada no disco.
 }
 \description{
@@ -38,17 +38,17 @@ e adiciona marcações circulares (raio de análise) ao redor das coordenadas de
 cidade ou ponto de interesse específico.
 }
 \examples{
-\dontrun{
-# Gerar imagem para Cianorte com raio de 50 pixels (salva em tempfile)
+# Gerar imagem para Cianorte com raio de 50 pixels (salva automaticamente em tempfile)
 img_cianorte <- gerar_imagem_radar(cidade = "Cianorte", raio = 50)
 
-# Adicionar uma nova cidade e salvar em um caminho especifico
+# Adicionar uma nova cidade e salvar em um caminho temporario seguro para o 'CRAN'
 novas_coords <- list("Londrina" = list(x = 520, y = 175))
-gerar_imagem_radar(
+caminho_teste <- tempfile(fileext = ".png")
+
+img_londrina <- gerar_imagem_radar(
   cidade = "Londrina",
-  raio = 60,
+  raio = 50,
   coords_custom = novas_coords,
-  caminho_salvar = "C:/temp/radar_londrina.png"
+  caminho_salvar = caminho_teste
 )
-}
 }

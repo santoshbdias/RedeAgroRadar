@@ -25,24 +25,18 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' # Exemplo de execucao com limites padrao
+#'  \dontrun{
+#' # Exemplo necessita de token e chatID 'Telegram'
 #' executar_alerta_telegram(
 #'   mega = "Cianorte",
 #'   chat_id = "-1001951367890",
 #'   bot_token = "SEU_TOKEN_AQUI",
-#'   raio = 50
-#' )
-#'
-#' # Exemplo alterando os gatilhos de chuva forte e leve
-#' executar_alerta_telegram(
-#'   mega = "Toledo",
-#'   chat_id = "-1009876543210",
-#'   bot_token = "SEU_TOKEN_AQUI",
+#'   raio = 50,
 #'   vermelho = c(80, 20),
 #'   amarelo = c(60, 40)
 #' )
 #' }
+
 executar_alerta_telegram <- function(mega = "Cianorte", chat_id, bot_token, raio = 50,
                                      vermelho = c(70, 25), amarelo = c(65, 33), coords_custom = NULL) {
 
