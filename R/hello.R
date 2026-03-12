@@ -45,8 +45,6 @@ Run_Monitor_RedeAgro(Token='7935384745:AAET5JvZdH6qCnpfPrMEi-plgrVMHEx_Eo8',
 Run_Monitor_RedeAgro(Token='7935384745:AAET5JvZdH6qCnpfPrMEi-plgrVMHEx_Eo8',chatID='-4952627577')
 
 
-usethis::use_git()
-
 #PUBLICAÇÃO CRAN
 #devtools::check_win_release()
 #devtools::check_win_devel()
