@@ -25,7 +25,7 @@
 #' @export
 #'
 #' @examples
-#'  \dontrun{
+#' if (interactive()) {
 #' # Exemplo necessita de token e chatID 'Telegram'
 #' executar_alerta_telegram(
 #'   mega = "Cianorte",

@@ -39,7 +39,7 @@ caso de erro, respeitando as políticas do CRAN para manipulação de arquivos.
 A comunicação com o Telegram tem um \emph{timeout} de segurança de 15 segundos.
 }
 \examples{
-\dontrun{
+if (interactive()) {
 # Exemplo necessita de token e chatID 'Telegram'
 # Enviar apenas se o horario local for exatamente 13:00
 status_diario(
