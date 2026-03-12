@@ -28,10 +28,18 @@ devtools::install_github("santoshbdias/RedeAgroRadar")
 Este é um exemplo básico que mostra como iniciar o painel de monitoramento interativo:
 
 ``` r
+
 library(RedeAgroRadar)
 
 # Iniciar o dashboard interativo
 Run_Monitor_RedeAgro()
+
+Run_Monitor_RedeAgro(
+  Token = "8610075813:AAF-Ls0bN21Wg7pOVjrVMz_RYYgfuEaLWBM",
+  chatID = "-5040700528",
+  limites_personalizados = list(vr = 70, vb = 25, ar = 65, ab = 33)
+)
+
 
 
 ```
