@@ -36,5 +36,5 @@ Language: pt-BR
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-Imports: 'httr', 'magick', 'shiny', 'bslib'
+Imports: httr, magick, shiny, bslib
 

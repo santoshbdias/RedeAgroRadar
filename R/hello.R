@@ -18,8 +18,7 @@
 #############################################################################################
 #########################CRIANDO MEU PACOTE#################################################
 #
-# devtools::document() # Cria os ficheiros .Rd na pasta man/
-# devtools::check()    # Faz a simulacao do CRAN (Deve dar 0 errors, 0 warnings)
+
 
 ## Adiciona o pacote httr como dependencia oficial
 #usethis::use_package("httr")
@@ -44,6 +43,9 @@ Run_Monitor_RedeAgro(Token='7935384745:AAET5JvZdH6qCnpfPrMEi-plgrVMHEx_Eo8',
                      limites_personalizados = list(vr = 70, vb = 25, ar = 65, ab = 33)) # Você pode omitir o amarelo (ar, ab), ele puxa o padrão!
 
 Run_Monitor_RedeAgro(Token='7935384745:AAET5JvZdH6qCnpfPrMEi-plgrVMHEx_Eo8',chatID='-4952627577')
+
+
+usethis::use_git()
 
 #PUBLICAÇÃO CRAN
 #devtools::check_win_release()
