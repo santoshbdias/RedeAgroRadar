@@ -89,7 +89,7 @@ Run_Monitor_RedeAgro <- function(Token = "", chatID = "", limites_personalizados
                          fluidRow(
                            column(6, bslib::card(
                              bslib::card_header("Passo a Passo: Como criar seu Bot", class = "bg-primary text-white"),
-                             HTML("<ol><li>Abra o Telegram e busque por <b>@BotFather</b>.</li><li>Envie a mensagem <code>/newbot</code>.</li><li>De um nome ao seu bot.</li><li>De um nome de usuario terminando em 'bot'.</li><li>O BotFather enviara o <b>Token</b>.</li><li>Crie um grupo no Telegram, adicione o bot como adm e mande um 'Ola' no grupo.</li></ol>")
+                             HTML("<ol><li>Abra o Telegram e busque por <b>@BotFather</b>.</li><li>Envie a mensagem <code>/newbot</code>.</li><li>De um nome ao seu bot.</li><li>De um nome de usuario terminando em 'bot'.</li><li>O BotFather enviara o <b>Token</b>.</li><li>Busque o bot pelo nome e clique em <b>Start</b> na conversa com ele.</li><li>Crie um grupo no Telegram, adicione o bot como adm e mande um 'Ola' no grupo.</li></ol>")
                            )),
                            column(6, bslib::card(
                              bslib::card_header("Conectar o Bot", class = "bg-success text-white"),
